@@ -17,6 +17,13 @@
   </ul>
   <script>
     $(function() {
+      $('#sortable').sortable({
+        cursor: 'move',
+        opacity: 0.5,
+        update: function(event, ui) {
+          console.log($(this).sortable("serialize"));
+        }
+      });
     });
   </script>
 </body>
