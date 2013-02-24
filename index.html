@@ -7,19 +7,21 @@
   <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
   <script type="text/javascript" src="js/jquery-ui-1.10.1.custom.min.js"></script>
 </head>
-<div id="bar" style="width: 200px"></div>
-<div id="slider" style="width: 200px; margin-top: 20px"></div>
+<div id="tabs">
+  <ul>
+    <li><a href="#menu1">Menu1</a></li>
+    <li><a href="#menu2">Menu2</a></li>
+    <li><a href="#menu3">Menu3</a></li>
+  </ul>
+  <div id="menu1">menu 1</div>
+  <div id="menu2">menu 2</div>
+  <div id="menu3">menu 3</div>
+</div>
 <body>
   <script>
     $(function() {
-      $('#bar').progressbar({
-        value: 33
-      });
-      $('#slider').slider({
-        slide: function(event, ui) {
-          console.log(ui.value);
-          $('#bar').progressbar('option', 'value', ui.value);
-        }
+      $('#tabs').tabs({
+        active: 2
       });
     });
   </script>
