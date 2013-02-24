@@ -18,6 +18,9 @@
       height: 100px;
       background-color: pink;
     }
+    .hover {
+      background-color: red;
+    }
   </style>
 </head>
 <body>
@@ -28,6 +31,8 @@
       $('.box').draggable();
       $('.target').droppable({
         accept: '.box',
+        hoverClass: 'hover',
+        tolerance: 'fit',
         drop: function() {
           console.log('dropped!');
         }
