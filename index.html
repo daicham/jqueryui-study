@@ -18,7 +18,10 @@
   <div id="box">box</div>
   <script>
     $(function() {
-      $('#box').draggable();
+      $('#box').draggable({
+        axis: 'x',
+        opacity: 0.5
+      });
     });
   </script>
 </body>
