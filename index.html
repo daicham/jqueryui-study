@@ -8,15 +8,23 @@
   <script type="text/javascript" src="js/jquery-ui-1.10.1.custom.min.js"></script>
 </head>
 <body>
-  <input type="text" id="datepicker">
+  <button>Open!</button>
+  <div id="msg">こんにちは！</div>
   <script>
     $(function() {
-      $('#datepicker').datepicker({
-        dateFormat: "yy-mm-dd",
-        numberOfMonths: 3,
-        minDate: -2,
-        maxDate: 30
+      $('button').click(function() {
+        $('#msg').dialog('open');
       });
+     $('#msg').dialog({
+      autoOpen: false,
+      buttons: {
+        "OK": function() {
+          $(this).dialog('close');
+        }
+      },
+      title: "title",
+      modal: true 
+     });
     });
   </script>
 </body>
