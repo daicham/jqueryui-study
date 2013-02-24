@@ -18,6 +18,13 @@
   <div class="box">box</div>
   <script>
     $(function() {
+      $('.box').draggable().resizable({
+        handles: 'all',
+        aspectRatio: true,
+        stop: function(event, ui) {
+          console.log(ui.size.height, ui.size.width);
+        } 
+      });
     });
   </script>
 </body>
