@@ -25,6 +25,13 @@
   <div class="target">target</div>
   <script>
     $(function() {
+      $('.box').draggable();
+      $('.target').droppable({
+        accept: '.box',
+        drop: function() {
+          console.log('dropped!');
+        }
+      })
     });
   </script>
 </body>
