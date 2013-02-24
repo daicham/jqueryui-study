@@ -8,38 +8,16 @@
   <script type="text/javascript" src="js/jquery-ui-1.10.1.custom.min.js"></script>
   <style type="text/css">
     .box {
-      width: 50px;
-      height: 50px;
-      background-color: #ccc;
-      margin-bottom: 20px;
-    }
-    .target {
       width: 100px;
       height: 100px;
-      background-color: pink;
-    }
-    .hover {
-      background-color: red;
+      background-color: #ccc;
     }
   </style>
 </head>
 <body>
   <div class="box">box</div>
-  <div class="target">target</div>
   <script>
     $(function() {
-      $('.box').draggable({
-        helper: 'clone'
-      });
-      $('.target').droppable({
-        accept: '.box',
-        hoverClass: 'hover',
-        tolerance: 'fit',
-        drop: function(event, ui) {
-          ui.draggable.clone().appendTo(this);
-          console.log('dropped!');
-        }
-      })
     });
   </script>
 </body>
