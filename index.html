@@ -15,16 +15,15 @@
   </style>
 </head>
 <body>
-  <div class="box">box</div>
+  <ul id="selectable">
+    <li id="item_1">item1</li>
+    <li id="item_2">item2</li>
+    <li id="item_3">item3</li>
+    <li id="item_4">item4</li>
+    <li id="item_5">item5</li>
+  </ul>
   <script>
     $(function() {
-      $('.box').draggable().resizable({
-        handles: 'all',
-        aspectRatio: true,
-        stop: function(event, ui) {
-          console.log(ui.size.height, ui.size.width);
-        } 
-      });
     });
   </script>
 </body>
