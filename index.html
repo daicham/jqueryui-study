@@ -23,7 +23,10 @@
       $('#box').draggable({
         axis: 'x',
         opacity: 0.5,
-        cancel: '.cancel'
+        cancel: '.cancel',
+        drag: function(event, ui) {
+          console.log(ui.position.left);
+        }
       });
     });
   </script>
