@@ -15,12 +15,15 @@
   </style>
 </head>
 <body>
-  <div id="box">box</div>
+  <div id="box">box
+    <div class="handle">drag here</div>
+  </div>
   <script>
     $(function() {
       $('#box').draggable({
         axis: 'x',
-        opacity: 0.5
+        opacity: 0.5,
+        handle: '.handle'
       });
     });
   </script>
