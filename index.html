@@ -28,12 +28,15 @@
   <div class="target">target</div>
   <script>
     $(function() {
-      $('.box').draggable();
+      $('.box').draggable({
+        helper: 'clone'
+      });
       $('.target').droppable({
         accept: '.box',
         hoverClass: 'hover',
         tolerance: 'fit',
-        drop: function() {
+        drop: function(event, ui) {
+          ui.draggable.clone().appendTo(this);
           console.log('dropped!');
         }
       })
