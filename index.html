@@ -8,8 +8,13 @@
   <script type="text/javascript" src="js/jquery-ui-1.10.1.custom.min.js"></script>
 </head>
 <body>
+  <input type="text" id="langs">
   <script>
+    var langs = ["ja", "en", "cn", "fr", "sp", "日本語"];
     $(function() {
+      $('#langs').autocomplete({
+        source: langs
+      });
     });
   </script>
 </body>
